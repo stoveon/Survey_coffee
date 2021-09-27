@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>surveyCoffee</display-name>
+
+<servlet>
+	<servlet-name>Controller</servlet-name>
+	<servlet-class>exam.controller.ControllerAction</servlet-class>
+	<init-param>
+		<param-name>propertyConfig</param-name>
+		<param-value>commandPro.properties</param-value>
+	</init-param>
+		<multipart-config>
+		<max-file-size>20848820</max-file-size>
+		<max-request-size>418018841</max-request-size>
+		<file-size-threshold>1048576</file-size-threshold>
+	</multipart-config>
+</servlet>
+<servlet-mapping>
+	<servlet-name>Controller</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
+
+<!-- <servlet>
+	<servlet-name>ControllerF</servlet-name>
+	<servlet-class>exam.controller.FileControllerAction</servlet-class>
+	<init-param>
+		<param-name>propertyConfig</param-name>
+		<param-value>commandPro.properties</param-value>
+	</init-param>
+	<multipart-config>
+		<max-file-size>20848820</max-file-size>
+		<max-request-size>418018841</max-request-size>
+		<file-size-threshold>1048576</file-size-threshold>
+	</multipart-config>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ControllerF</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping> -->
+
+</web-app>
